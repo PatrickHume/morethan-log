@@ -27,6 +27,7 @@ const PostHeader: React.FC<Props> = ({ data }) => {
                     alt="profile_photo"
                     width={24}
                     height={24}
+                    style={{borderRadius:"50%"}}
                   />
                   <div className="">{data.author[0].name}</div>
                 </div>
