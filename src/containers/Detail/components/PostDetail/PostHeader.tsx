@@ -21,14 +21,16 @@ const PostHeader: React.FC<Props> = ({ data }) => {
             {data.author && data.author[0] && data.author[0].name && (
               <>
                 <div className="flex items-center gap-2">
+                <div style={{borderRadius: '50%', overflow: 'hidden'}}>
                   <Image
-                    className="rounded-circle"
+                    className="rounded-full"
                     src={data.author[0].profile_photo || CONFIG.profile.image}
                     alt="profile_photo"
                     width={24}
                     height={24}
                   />
                   <div className="">{data.author[0].name}</div>
+                </div>
                 </div>
                 <div className="self-stretch w-px my-1 bg-gray-300"></div>
               </>
