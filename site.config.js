@@ -3,8 +3,9 @@ const CONFIG = {
   profile: {
     name: "Patrick Hume",
     image: "/profile-pic.JPG", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
-    role: "computer science student at UOM",
-    bio: "Lover of squiggly brackets.",
+    role: "lover of squiggly brackets",
+    bio: "Hi, I'm Patrick, an undergraduate Computer Science student at The University of Manchester.\
+    I'm passionate about writing Javascript and C++.",
     email: "patrickhume.dev@gmail.com",
     linkedin: "",
     github: "PatrickHume",
