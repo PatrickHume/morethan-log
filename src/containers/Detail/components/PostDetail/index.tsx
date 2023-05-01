@@ -85,9 +85,8 @@ const PostDetail: React.FC<Props> = ({ blockMap, data }) => {
 
   useEffect(() => {
     if (!localStorage.getItem('prismLanguages')) {
-      ConfController.preload().then(() => {
-        localStorage.setItem('prismLanguages', 'loaded');
-      });
+      ConfController.preload();
+      localStorage.setItem('prismLanguages', 'loaded');
     }
   }, []);
 
