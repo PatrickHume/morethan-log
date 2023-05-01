@@ -52,10 +52,6 @@ svg + .notion-page-title-text {
   @apply text-gray-900;
 } */
 
- .language-c\+\+ {
-  class:language-cpp;
-}
-
 pre[class*="language-"] {
   line-height: inherit;
 }
