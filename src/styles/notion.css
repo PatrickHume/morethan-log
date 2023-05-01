@@ -48,9 +48,9 @@ svg + .notion-page-title-text {
   @apply text-gray-600 dark:text-gray-300;
 }
 
-.notion-code > code {
+/* .notion-code > code {
   @apply text-gray-900;
-}
+} */
 
 pre[class*="language-"] {
   line-height: inherit;
