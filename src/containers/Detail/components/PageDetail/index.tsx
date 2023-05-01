@@ -6,11 +6,6 @@ import Link from "next/link"
 import Image from "next/image"
 import Prism from "prismjs"
 require("prismjs/components/")();
-class Codeblock extends React.Component {
-  componentDidMount() {
-    Prism.highlightAll();
-  }
-}
 
 const Code = dynamic(() =>
   import('react-notion-x/build/third-party/code').then((m) => m.Code)
