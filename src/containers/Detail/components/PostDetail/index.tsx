@@ -78,7 +78,7 @@ const PostDetail: React.FC<Props> = ({ blockMap, data }) => {
   const category = (data.category && data.category?.[0]) || undefined
 
   useEffect(() => {
-    ConfController.preload();
+    ConfController.load();
 }, []);
 
   return (
