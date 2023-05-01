@@ -5,11 +5,6 @@ import dynamic from "next/dynamic"
 import Link from "next/link"
 import Image from "next/image"
 
-import * as prism from 'prismjs';
-
-const loadLanguages = require('prismjs/components/index');
-loadLanguages(['php', 'ruby']);
-
 const Code = dynamic(() =>
   import('react-notion-x/build/third-party/code').then((m) => m.Code)
 )
