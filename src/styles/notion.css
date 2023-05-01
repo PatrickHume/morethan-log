@@ -53,7 +53,7 @@ svg + .notion-page-title-text {
 } */
 
  .language-c\+\+ {
-  @apply language-cpp;
+  class:language-cpp;
 }
 
 pre[class*="language-"] {
