@@ -13,6 +13,7 @@ const MobileProfileCard: React.FC<Props> = () => {
       <div className="p-2 rounded-2xl bg-white dark:bg-zinc-700 mb-4">
         <div className="flex items-center gap-2">
           <Image
+            className="rounded-full"
             src={CONFIG.profile.image}
             width={90}
             height={90}
