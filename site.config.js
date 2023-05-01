@@ -19,7 +19,7 @@ const CONFIG = {
   ],
   // blog setting (required)
   blog: {
-    title: "patrick hume",
+    title: "Patrick Hume",
     description: "this is a place to document some of my favourite work",
     theme: "auto", // ['light', 'dark', 'auto']
   },
