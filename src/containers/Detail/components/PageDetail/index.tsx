@@ -5,7 +5,7 @@ import dynamic from "next/dynamic"
 import Link from "next/link"
 import Image from "next/image"
 
-import * as prism from 'prismjs';
+import Prism from 'prismjs';
 require("prismjs/components/")();
 
 const Code = dynamic(() =>
