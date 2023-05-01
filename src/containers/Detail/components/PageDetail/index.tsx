@@ -6,7 +6,8 @@ import Link from "next/link"
 import Image from "next/image"
 
 const Code = dynamic(() =>
-  import("react-notion-x/build/third-party/code").then(async (m) => m))  // additional prism syntaxes
+  import('react-notion-x/build/third-party/code').then(async (m) => {
+    // additional prism syntaxes
     await Promise.all([
       import('prismjs/components/prism-markup-templating.js'),
       import('prismjs/components/prism-markup.js'),
