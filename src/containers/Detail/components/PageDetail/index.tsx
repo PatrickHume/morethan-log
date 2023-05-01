@@ -4,7 +4,10 @@ import React from "react"
 import dynamic from "next/dynamic"
 import Link from "next/link"
 import Image from "next/image"
-import Prism from "prismjs"
+
+const Prism = require('prismjs');
+const loadLanguages = require('prismjs/components/');
+loadLanguages(['python']);
 
 const Code = dynamic(() =>
   import('react-notion-x/build/third-party/code').then((m) => m.Code)
