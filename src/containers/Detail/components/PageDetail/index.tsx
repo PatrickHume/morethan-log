@@ -40,10 +40,9 @@ type Props = {
 
 const PageDetail: React.FC<Props> = ({ blockMap, data }) => {
 
-  const [filesLoaded, setFilesLoaded] = useState(false);
   useEffect(() => {
     var loadData = async() => {
-      await Promise.all([
+      const [initalData, hoverOnData, hoverOffData] = await Promise.all([
         import('prismjs/components/prism-markup-templating.js'),
         import('prismjs/components/prism-markup.js'),
         import('prismjs/components/prism-bash.js'),
@@ -68,9 +67,7 @@ const PageDetail: React.FC<Props> = ({ blockMap, data }) => {
         import('prismjs/components/prism-swift.js'),
         import('prismjs/components/prism-wasm.js'),
         import('prismjs/components/prism-yaml.js')
-      ]).then(() => {
-        setFilesLoaded(true);
-      });
+      ]);
     }
     loadData();
   }, [])
