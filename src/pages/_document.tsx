@@ -1,6 +1,13 @@
-import Document, { Html, Head, Main, NextScript } from "next/document"
+import Document, { Html, Head, Main, NextScript} from "next/document"
 import { CONFIG } from "site.config"
+import Prism from "prismjs";
+import "../css/prism.css";
 
+class Codeblock extends Document {
+  componentDidMount() {
+    Prism.highlightAll();
+  }
+}
 class MyDocument extends Document {
   render() {
     return (
