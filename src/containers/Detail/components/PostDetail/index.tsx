@@ -63,7 +63,6 @@ const PostDetail: React.FC<Props> = ({ blockMap, data }) => {
       blockMap.block[key].value.properties.language[0] = ["cpp"];
     }
   }
-  console.log(blockMap);
 
   useEffect(() => {
     // apply syntax highlighting
