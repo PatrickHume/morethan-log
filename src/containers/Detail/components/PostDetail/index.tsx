@@ -1,14 +1,14 @@
 import { NotionRenderer } from "react-notion-x"
 import dynamic from "next/dynamic"
 import { TPost } from "@/src/types"
-import React, { useEffect } from "react"
+import React, { useEffect } from 'react';
 import PostHeader from "./PostHeader"
 import Footer from "./PostFooter"
 import CommentBox from "./CommentBox"
 import Category from "@components/Category"
 import Image from "next/image"
 import Link from "next/link"
-import 'prismjs/components/'
+import Prism from "prismjs"
 
 const Code = dynamic(() =>
   import('react-notion-x/build/third-party/code').then((m) => {
@@ -48,6 +48,27 @@ type Props = {
 
 const PostDetail: React.FC<Props> = ({ blockMap, data }) => {
   const category = (data.category && data.category?.[0]) || undefined
+
+  let blocks = blockMap.block;
+  // loop over blocks
+  for (var key of Object.keys(blocks)) {
+    let block = blocks[key];
+    // ensure block is reader block
+    if(block.role != 'reader') continue;
+    let value = block.value;
+    // ensure block is code block
+    if(value.type != 'code') continue;
+    let language = value.properties.language[0];
+    if(language == "C++"){
+      blockMap.block[key].value.properties.language[0] = ["cpp"];
+    }
+  }
+  console.log(blockMap);
+
+  useEffect(() => {
+    // apply syntax highlighting
+    Prism.highlightAll()
+  });
 
   return (
     <div
