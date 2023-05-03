@@ -8,7 +8,6 @@ import CommentBox from "./CommentBox"
 import Category from "@components/Category"
 import Image from "next/image"
 import Link from "next/link"
-import Prism from "prismjs"
 
 const Code = dynamic(() =>
   import('react-notion-x/build/third-party/code').then((m) => {
@@ -63,11 +62,6 @@ const PostDetail: React.FC<Props> = ({ blockMap, data }) => {
       blockMap.block[key].value.properties.language[0] = ["cpp"];
     }
   }
-
-  useEffect(() => {
-    // apply syntax highlighting
-    Prism.highlightAll()
-  });
 
   return (
     <div

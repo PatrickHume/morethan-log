@@ -9,6 +9,8 @@ import Scripts from '@components/Scripts'
 import { NextPage } from 'next'
 import { ReactElement, ReactNode } from 'react'
 import { AppProps } from 'next/app'
+import { useEffect } from "react";
+import Prism from "prismjs";
 
 export type NextPageWithLayout<PageProps = {}> = NextPage<PageProps> & {
   getLayout?: (page: ReactElement) => ReactNode
@@ -22,6 +24,10 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout || ((page) => page)
   useThemeEffect()
   useGtagEffect()
+  useEffect(() => {
+    // apply syntax highlighting
+    Prism.highlightAll()
+  });
 
   return (
     <>
