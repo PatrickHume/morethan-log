@@ -1,6 +1,12 @@
 import { CONFIG } from "site.config"
 import Image from "next/image"
 import React from "react"
+import {
+  AiOutlineInstagram,
+  AiOutlineGithub,
+  AiOutlineMail,
+  AiFillLinkedin,
+} from "react-icons/ai"
 
 type Props = {
   className?: string
@@ -29,7 +35,7 @@ const MobileProfileCard: React.FC<Props> = () => {
             <div className="text-sm">{CONFIG.profile.bio}</div>
           </div>
         </div>
-        {/* <div className="flex">
+        <div className="flex">
           {CONFIG.profile.github && (
             <a
               href={`https://github.com/${CONFIG.profile.github}`}
@@ -40,6 +46,7 @@ const MobileProfileCard: React.FC<Props> = () => {
               <AiOutlineGithub className="text-2xl" />
             </a>
           )}
+          {/* 
           {CONFIG.profile.instagram && (
             <a
               href={`https://www.instagram.com/${CONFIG.profile.instagram}`}
@@ -50,6 +57,7 @@ const MobileProfileCard: React.FC<Props> = () => {
               <AiOutlineInstagram className="text-2xl" />
             </a>
           )}
+          */}
           {CONFIG.profile.email && (
             <a
               href={`mailto:${CONFIG.profile.email}`}
@@ -70,7 +78,7 @@ const MobileProfileCard: React.FC<Props> = () => {
               <AiFillLinkedin className="text-2xl flex-shrink-0" />
             </a>
           )}
-        </div> */}
+        </div> 
       </div>
     </div>
   )

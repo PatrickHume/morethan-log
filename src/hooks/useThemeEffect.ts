@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { CONFIG } from "site.config"
 import { ThemeType } from "@customTypes/index"
 import Prism from "prismjs";
+import 'prismjs/themes/prism.css'
 
 export const getTheme: () => ThemeType = () => {
   const themeConfig = CONFIG.blog.theme as "auto" & ThemeType
