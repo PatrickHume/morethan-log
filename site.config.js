@@ -5,7 +5,7 @@ const CONFIG = {
     image: "/profile-pic.JPG", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
     role: "3rd year CS student",
     bio: "I'm Patrick, an undergraduate Computer Science student at The University of Manchester.\
-    I'm interested in modern web frameworks and low-level programming.",
+    I'm interested in modern web frameworks and low-level software development.",
     email: "patrick.hume31@gmail.com",
     linkedin: "patrick-hume",
     github: "PatrickHume",
