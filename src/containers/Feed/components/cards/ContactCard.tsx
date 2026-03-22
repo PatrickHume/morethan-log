@@ -4,8 +4,7 @@ import {
   AiOutlineInstagram,
   AiOutlineGithub,
   AiOutlineMail,
-  AiFillLinkedin,
-  AiOutlineFilePdf
+  AiFillLinkedin
 } from "react-icons/ai"
 
 const ContactCard: React.FC = () => {
@@ -44,17 +43,6 @@ const ContactCard: React.FC = () => {
           >
             <AiOutlineInstagram className="text-2xl" />
             <div className="text-sm">instagram</div>
-          </a>
-        )}
-        {CONFIG.profile.cv && (
-            <a
-            href={`/files/${CONFIG.profile.cv}.pdf`}
-            target="_blank"
-            rel="noreferrer"
-            className="p-3 hover:bg-gray-100 dark:hover:bg-zinc-700 rounded-2xl cursor-pointer flex items-center gap-3 text-gray-500 dark:text-white hover:text-black dark:hover:text-white"
-          >
-            <AiOutlineFilePdf className="text-2xl" />
-            <div className="text-sm">cv</div>
           </a>
         )}
         {CONFIG.profile.linkedin && (
