@@ -5,8 +5,7 @@ import {
   AiOutlineInstagram,
   AiOutlineGithub,
   AiOutlineMail,
-  AiFillLinkedin,
-  AiOutlineFilePdf
+  AiFillLinkedin
 } from "react-icons/ai"
 
 type Props = {
@@ -47,16 +46,6 @@ const MobileProfileCard: React.FC<Props> = () => {
               <AiOutlineGithub className="text-2xl" />
             </a>
           )}
-        {CONFIG.profile.cv && (
-            <a
-            href={`/files/${CONFIG.profile.cv}.pdf`}
-            target="_blank"
-            rel="noreferrer"
-            className="  overflow-hidden p-3 dark:hover:bg-zinc-700 rounded-2xl cursor-pointer text-gray-500 dark:text-white"
-            >
-              <AiOutlineFilePdf className="text-2xl flex-shrink-0" />
-          </a>
-        )}
           {/* 
           {CONFIG.profile.instagram && (
             <a
